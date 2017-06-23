@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap-social.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <style>
+        .auth_vk {
+            margin-top: 50px;
+            margin-left: 800px;
+        }
+        .lo {
+            margin-top: -25px;
+            margin-left: 160px;
+        }
+        .friends {
+            margin-top: 50px;
+            margin-left: 653px;
+        }
+        .list_friends {
+            margin-top: 12px;
+            margin-left: -1px;
+        }
+    </style>
+</head>
+<body>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'base_vk.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% load socialaccount %}
+
+{% block content %}
+<div class="auth_vk">
+    <a class="btn btn-social-icon btn-sm btn-vk" href="{% provider_login_url "vk" method="oauth2" %}">
+    <span class="fa fa-vk"></span>
+    </a>
+    {{ user.get_full_name }}
+    {% if user.is_authenticated %}
+    <div class="lo">
+    <a href="/accounts/logout/">sing out</a>
+    </div>
+    <div class="list_friends">
+    <a href="/friends/">Показать друзей на сайте</a>
+    </div>
+    {% endif %}
+<div class="friends">
+{% for user in users_list%}
+  {{user}},
+{% endfor %}
+</div>
+</div>
+{% endblock %}
